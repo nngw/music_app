@@ -15,20 +15,23 @@ function LikeButton () {
 
     const [click, setClick] = useState(false)
 
+    let isLiked = "Like"
+    
     const handleClick = (e) => {
-      if(click){
+        setClick(prevClick => !prevClick)
+        if(click){
           e.target.style.backgroundColor = 'purple'
-          // countSepClick(sepClicked+1)
         } else {
             e.target.style.backgroundColor = 'green'
-            // countSepClick(sepClicked-1)
         }
-    setClick(prevClick => !prevClick)
+    
     }
 
+
     return(
-        <button onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick} >Like</button>
+        <button onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick} >{isLiked}</button>
     )
+    
 }
 
 export default LikeButton
