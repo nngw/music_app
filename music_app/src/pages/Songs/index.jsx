@@ -7,7 +7,7 @@ function Songs() {
 
   return (
     <>
-      <h3>Albums</h3>
+      <h3>songs</h3>
       <ul>
         <li className='liContainer'>
           <div className='flexContainer'>
