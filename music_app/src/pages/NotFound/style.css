@@ -1,0 +1,10 @@
+.notFound h2{
+  text-align: center;
+} 
+.homepageLink {
+  color: red;
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
