@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './Form.css'
+import React, { useState } from 'react'
+import './style.css'
 
-function Form() {
+function Comments() {
   const [comment, setComment] = useState("");
 
   const [commentsArray, setComments] = useState([])
@@ -19,10 +17,11 @@ function Form() {
       <h3>Comment</h3>
       <h5>Let us know what you think about Bring Me the Horizon. Type your comment below</h5>
       <form onSubmit={handleSubmit}>
-        <label> 
-          <input 
+        <label htmlFor="commentInput"> 
+          <textarea 
             required
-            type="text" 
+            id='commentInput'
+            rows="3" cols="50" 
             value={comment}
             onChange={(e) => setComment(e.target.value)}/>
         </label>
@@ -40,4 +39,4 @@ function Form() {
   )
 }
 
-export default Form
+export default Comments

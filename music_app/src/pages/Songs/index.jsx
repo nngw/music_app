@@ -1,14 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './Albums.css'
-import LikeButton from './likeButton'
+import React from 'react'
+import './index.css'
+import LikeButton from '../../componants/LikeButton'
 
-function Album() {
-  const [likes, setCount] = useState(0)
- 
-
-  
+function Songs() {
+  // const [likes, setCount] = useState(0)
 
   return (
     <>
@@ -43,4 +38,4 @@ function Album() {
   )
 }
 
-export default Album
+export default Songs

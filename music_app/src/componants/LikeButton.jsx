@@ -6,7 +6,6 @@ function LikeButton () {
 
     const handleMouseEnter = (e) => {
         e.target.style.color = 'red'
-        // e.target.style.boxShadow = '10rem'
       }
     
       const handleMouseLeave = (e) => {
