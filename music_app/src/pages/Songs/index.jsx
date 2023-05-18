@@ -15,7 +15,7 @@ function Songs() {
   return (
     <>
       <h3>songs</h3>
-      {/* <ul>
+      <ul>
         <li className='liContainer'>
           <div className='flexContainer'>
            <LikeButton />
@@ -24,7 +24,7 @@ function Songs() {
               <h4>Album title: Sepriternal</h4>
               <h4>Rlease year: 2013</h4>
             </div>
-            <h4 className='likeCount'>Likes: {likes}</h4>
+            {/* <h4 className='likeCount'>Likes: {likes}</h4> */}
           </div>
         </li>
         <li className='liContainer'>
@@ -37,10 +37,10 @@ function Songs() {
               <h4>Album title: That's The Spirit</h4>
               <h4>Rlease year: 2015</h4>
             </div>
-            <h4 className='likeCount'>Likes: {likes}</h4>
+            {/* <h4 className='likeCount'>Likes: {likes}</h4> */}
           </div>
         </li>
-      </ul> */}
+      </ul>
     </>
   )
 }
