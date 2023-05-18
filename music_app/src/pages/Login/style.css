@@ -1,0 +1,32 @@
+.textCenter {
+  text-align: center;
+}
+
+.itemAlign{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mb20{
+  margin-bottom: 20px;
+}
+
+.p10{
+  padding: 10px;
+}
+
+.redText{
+  color: red;
+}
+
+.btn-red{
+  background-color: white;
+  color: red;
+}
+
+.btn-red:hover{
+  background-color: red;
+  color: white;
+}
