@@ -7,7 +7,7 @@ function Songs() {
   async function getArtistDetails () {
     const res = await axios.get('https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=BringMethehorizon&api_key=20e0ac2d870553ac17505122660cd87b&format=json')
 
-    console.log(res.data)
+    // console.log(res.data)
     
   }
   getArtistDetails()

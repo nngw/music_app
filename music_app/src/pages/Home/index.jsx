@@ -1,27 +1,30 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+// import Api from '../../ApiCall'
 
 import { useAuth } from '../../contexts'
 
 import './style.css'
 
-const Home = () => {
-  const [artistDetails, setArtistDetails] = useState([])
+const Home = (props) => {
+  const [artistDetails, setArtistDetails] = useState([]) 
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    try {
-      async function getArtistDetails () {
+    async function getArtistDetails () {
+        try {
         const res = await axios.get('https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=BringMethehorizon&api_key=20e0ac2d870553ac17505122660cd87b&format=json')
         
         // const res = await axios.get(process.env.REACT_APP_KEY)
 
         setArtistDetails(res.data)
+        setLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
        
       }
-      // getArtistDetails()
-    } catch (error) {
-      console.log(error)
-    }
+      getArtistDetails()
 
   },[])
 
@@ -40,8 +43,12 @@ const Home = () => {
       <h1>Bring Me the Horizon</h1>
       <h2>Genre: Rock</h2>
       <h3>Intro:</h3>
-      {/* <p>{artistDetails.artist.bio.summary}</p> */}
-      <p>Bring Me the Horizon (often abbreviated as BMTH) are a British rock band, formed in Sheffield in 2004. The group currently consists of lead vocalist Oliver Sykes, guitarist Lee Malia, bassist Matt Kean, drummer Matt Nicholls and keyboardist Jordan Fish. They are signed to RCA Records globally and Columbia Records exclusively in the United States.</p>
+      {loading
+        ? <p>nothing to show</p>
+        : <p>{artistDetails.artist.bio.summary}</p>
+      }
+      
+      {/* <p>Bring Me the Horizon (often abbreviated as BMTH) are a British rock band, formed in Sheffield in 2004. The group currently consists of lead vocalist Oliver Sykes, guitarist Lee Malia, bassist Matt Kean, drummer Matt Nicholls and keyboardist Jordan Fish. They are signed to RCA Records globally and Columbia Records exclusively in the United States.</p> */}
     </>
   )
 }
