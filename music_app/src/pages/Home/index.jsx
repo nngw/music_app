@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <>
-      <h2>
+      <h2 className='textCenter'>
         Welcome <span className='redText '>{user}</span> to the BMtH Fan Page 
       </h2>
       <div>
